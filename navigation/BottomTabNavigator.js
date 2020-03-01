@@ -2,11 +2,10 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
 import GameScreen from '../screens/GameScreen';
 
 const BottomTab = createBottomTabNavigator();
-const INITIAL_ROUTE_NAME = 'Home';
+const INITIAL_ROUTE_NAME = 'Game';
 
 export default function BottomTabNavigator({ navigation, route }) {
   // Set the header title on the parent stack navigator depending on the
@@ -17,27 +16,19 @@ export default function BottomTabNavigator({ navigation, route }) {
   return (
     <BottomTab.Navigator initialRouteName={INITIAL_ROUTE_NAME}>
       <BottomTab.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{
-          title: 'Get Started',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
-        }}
-      />
-      <BottomTab.Screen
-        name="Links"
-        component={LinksScreen}
-        options={{
-          title: 'Resources',
-          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
-        }}
-      />
-      <BottomTab.Screen
         name="Game"
         component={GameScreen}
         options={{
           title: 'Game',
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-color-palette" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          title: 'Hints',
+          tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-code-working" />,
         }}
       />
     </BottomTab.Navigator>
@@ -50,9 +41,7 @@ function getHeaderTitle(route) {
   switch (routeName) {
     case 'Home':
       return 'How to get started';
-    case 'Links':
-      return 'Links to learn more';
     case 'Game':
-      return 'Рыбы карась - Игра началась!';
+      return 'What color is more?';
   }
 }

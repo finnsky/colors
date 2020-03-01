@@ -3,7 +3,7 @@ import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react
 import { ScrollView } from 'react-native-gesture-handler';
 import * as WebBrowser from 'expo-web-browser';
 
-import { MonoText } from '../components/StyledText';
+import { MonoText, LuckyText } from '../components/StyledText';
 
 export default function HomeScreen() {
   return (
@@ -27,6 +27,7 @@ export default function HomeScreen() {
 
           <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
             <MonoText>screens/HomeScreen.js</MonoText>
+            <LuckyText>screens/HomeScreen.js</LuckyText>
           </View>
 
           <Text style={styles.getStartedText}>

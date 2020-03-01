@@ -3,7 +3,6 @@
     "name": "colors",
     "slug": "colors",
     "privacy": "public",
-    "sdkVersion": "36.0.0",
     "platforms": [
       "ios",
       "android",
@@ -14,9 +13,9 @@
     "icon": "./assets/images/icon.png",
     "scheme": "myapp",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/images/splash@3x.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#002F2F"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -26,6 +25,7 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    "description": ""
   }
 }
